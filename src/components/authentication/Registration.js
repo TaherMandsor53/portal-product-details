@@ -30,6 +30,8 @@ export default function Registration(props) {
     const isValidConfirmPassword = registrationDetails.password === registrationDetails.confirmPassword;
 
     if (isValidName && isValidUserName && isValidPassword && isValidConfirmPassword) {
+      alert('User registration successful');
+      onCancelClick();
     } else {
       setRegistrationFormError(prevState => ({
         ...prevState,
